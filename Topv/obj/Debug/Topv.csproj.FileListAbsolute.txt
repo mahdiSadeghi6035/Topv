@@ -1,0 +1,11 @@
+C:\Users\sadqy\OneDrive\Desktop\Topv\Topv\obj\Debug\Topv.csproj.AssemblyReference.cache
+C:\Users\sadqy\OneDrive\Desktop\Topv\Topv\obj\Debug\Topv.csproj.SuggestedBindingRedirects.cache
+C:\Users\sadqy\OneDrive\Desktop\Topv\Topv\obj\Debug\Topv.Form1.resources
+C:\Users\sadqy\OneDrive\Desktop\Topv\Topv\obj\Debug\Topv.Properties.Resources.resources
+C:\Users\sadqy\OneDrive\Desktop\Topv\Topv\obj\Debug\Topv.csproj.GenerateResource.cache
+C:\Users\sadqy\OneDrive\Desktop\Topv\Topv\obj\Debug\Topv.csproj.CoreCompileInputs.cache
+C:\Users\sadqy\OneDrive\Desktop\Topv\Topv\bin\Debug\Topv.exe.config
+C:\Users\sadqy\OneDrive\Desktop\Topv\Topv\bin\Debug\Topv.exe
+C:\Users\sadqy\OneDrive\Desktop\Topv\Topv\bin\Debug\Topv.pdb
+C:\Users\sadqy\OneDrive\Desktop\Topv\Topv\obj\Debug\Topv.exe
+C:\Users\sadqy\OneDrive\Desktop\Topv\Topv\obj\Debug\Topv.pdb
