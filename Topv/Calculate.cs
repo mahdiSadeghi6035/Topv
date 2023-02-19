@@ -17,7 +17,7 @@ namespace Topv
 
         public ResultModel CalculateOld(CalculateModel command)
         {
-            var benefit = ((command.Price * command.Percent) * (command.Month + 1)) / 2400; // سود
+            var benefit = ((command.Price * command.Percent) * (command.Month + command.Space)) / 2400; // سود
             var payment = (command.Price + benefit) / command.Month; // قسط
             return new ResultModel(benefit, payment);
         }

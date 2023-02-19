@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using ValidationComponents;
 
 namespace Topv
 {
@@ -22,20 +15,43 @@ namespace Topv
         }
 
 
-        private void TabdilMohasebatRiazy_Click(object sender, EventArgs e)
+        private void Clear_Click(object sender, EventArgs e)
         {
-            var price = double.Parse(Price.Text.ToString());
-            var month = double.Parse(Price.Text.ToString());
-            var percent = double.Parse(Percent.Text.ToString());
+            Price.Text = "";
+            Month.Text = "";
+            Percent.Text = "";
+            Result.Text = "";
+        }
 
-            var command = new CalculateModel(price, month, percent);
-            var cb = CB.SelectedItem;
-            if(cb == null)
+        
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Space.Visible = true;
+            label4.Visible = true;
+        }
+        private void Price_TextChanged_1(object sender, EventArgs e)
+        {
+            double price;
+            price = double.Parse(Price.Text, System.Globalization.NumberStyles.Currency);
+            Price.Text = price.ToString("#,#");
+            Price.SelectionStart = Price.TextLength;
+        }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+            if (BaseValidator.IsFormValid(this.components))
             {
-                MessageBox.Show("لطفا یک روش را انتخاب کنید","خطا",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
-            else
-            {
+                var price = double.Parse(Price.Text);
+                var month = double.Parse(Month.Text);
+                var percent = double.Parse(Percent.Text);
+                var space = double.Parse(Space.Text);
+
+                var command = new CalculateModel(price, month, percent, space);
+                var cb = CB.SelectedItem;
+
+
                 switch (cb)
                 {
                     case "روش قدیم":
@@ -56,17 +72,20 @@ namespace Topv
             }
         }
 
-        private void Clear_Click(object sender, EventArgs e)
+        private void CB_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            Price.Text = "";
-            Price.Text = "";
-            Percent.Text = "";
-            Result.Text = "";
-        }
+            var cb = CB.Text;
+            if (cb == "روش قدیم")
+            {
+                Space.Visible = true;
+                label4.Visible = true;
+            }
+            else if (cb == "روش جدید")
+            {
+                Space.Visible = false;
+                label4.Visible = false;
+            }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            
         }
     }
 }

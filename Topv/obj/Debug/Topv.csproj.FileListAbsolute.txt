@@ -20,3 +20,13 @@ D:\Programming\CSharp\AppWindosForm\Topv\Topv\obj\Debug\Topv.csproj.GenerateReso
 D:\Programming\CSharp\AppWindosForm\Topv\Topv\obj\Debug\Topv.csproj.CoreCompileInputs.cache
 D:\Programming\CSharp\AppWindosForm\Topv\Topv\obj\Debug\Topv.exe
 D:\Programming\CSharp\AppWindosForm\Topv\Topv\obj\Debug\Topv.pdb
+F:\C#\Topv\Topv\bin\Debug\Topv.exe.config
+F:\C#\Topv\Topv\bin\Debug\Topv.exe
+F:\C#\Topv\Topv\bin\Debug\Topv.pdb
+F:\C#\Topv\Topv\obj\Debug\Topv.csproj.AssemblyReference.cache
+F:\C#\Topv\Topv\obj\Debug\Topv.Form1.resources
+F:\C#\Topv\Topv\obj\Debug\Topv.Properties.Resources.resources
+F:\C#\Topv\Topv\obj\Debug\Topv.csproj.GenerateResource.cache
+F:\C#\Topv\Topv\obj\Debug\Topv.csproj.CoreCompileInputs.cache
+F:\C#\Topv\Topv\obj\Debug\Topv.exe
+F:\C#\Topv\Topv\obj\Debug\Topv.pdb

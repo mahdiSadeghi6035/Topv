@@ -29,7 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Space = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Percent = new System.Windows.Forms.TextBox();
+            this.Month = new System.Windows.Forms.TextBox();
+            this.Price = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Clear = new System.Windows.Forms.Button();
@@ -37,14 +43,14 @@
             this.Result = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.TabdilMohasebatRiazy = new System.Windows.Forms.Button();
+            this.btn = new System.Windows.Forms.Button();
             this.CB = new System.Windows.Forms.ComboBox();
-            this.Price = new System.Windows.Forms.TextBox();
-            this.Month = new System.Windows.Forms.TextBox();
-            this.Percent = new System.Windows.Forms.TextBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.requiredFieldValidator1 = new ValidationComponents.RequiredFieldValidator(this.components);
+            this.requiredFieldValidator2 = new ValidationComponents.RequiredFieldValidator(this.components);
+            this.requiredFieldValidator3 = new ValidationComponents.RequiredFieldValidator(this.components);
+            this.requiredFieldValidator4 = new ValidationComponents.RequiredFieldValidator(this.components);
+            this.requiredFieldValidator5 = new ValidationComponents.RequiredFieldValidator(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -53,6 +59,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(244)))));
+            this.panel1.Controls.Add(this.Space);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.Percent);
             this.panel1.Controls.Add(this.Month);
             this.panel1.Controls.Add(this.Price);
@@ -63,27 +71,74 @@
             this.panel1.Controls.Add(this.Result);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.TabdilMohasebatRiazy);
+            this.panel1.Controls.Add(this.btn);
             this.panel1.Controls.Add(this.CB);
             this.panel1.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1145, 531);
+            this.panel1.Size = new System.Drawing.Size(757, 531);
             this.panel1.TabIndex = 14;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // Space
+            // 
+            this.Space.Location = new System.Drawing.Point(17, 271);
+            this.Space.Name = "Space";
+            this.Space.Size = new System.Drawing.Size(365, 32);
+            this.Space.TabIndex = 58;
+            this.Space.Text = "1";
+            this.Space.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Vazir", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(400, 271);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label4.Size = new System.Drawing.Size(178, 33);
+            this.label4.TabIndex = 57;
+            this.label4.Text = "فاصله بین اقساط : ";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Percent
+            // 
+            this.Percent.Location = new System.Drawing.Point(16, 217);
+            this.Percent.Name = "Percent";
+            this.Percent.Size = new System.Drawing.Size(365, 32);
+            this.Percent.TabIndex = 56;
+            this.Percent.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Month
+            // 
+            this.Month.Location = new System.Drawing.Point(16, 165);
+            this.Month.Name = "Month";
+            this.Month.Size = new System.Drawing.Size(365, 32);
+            this.Month.TabIndex = 55;
+            this.Month.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Price
+            // 
+            this.Price.Location = new System.Drawing.Point(16, 110);
+            this.Price.Name = "Price";
+            this.Price.Size = new System.Drawing.Size(365, 32);
+            this.Price.TabIndex = 54;
+            this.Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Price.TextChanged += new System.EventHandler(this.Price_TextChanged_1);
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Vazir", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(669, 126);
+            this.label5.Location = new System.Drawing.Point(399, 110);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label5.Size = new System.Drawing.Size(223, 42);
-            this.label5.TabIndex = 27;
+            this.label5.Size = new System.Drawing.Size(176, 33);
+            this.label5.TabIndex = 53;
             this.label5.Text = "قیمت را وارد کنید : ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -92,12 +147,12 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Vazir", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(669, 188);
+            this.label2.Location = new System.Drawing.Point(399, 162);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(195, 42);
-            this.label2.TabIndex = 26;
+            this.label2.Size = new System.Drawing.Size(156, 33);
+            this.label2.TabIndex = 52;
             this.label2.Text = "ماه را وارد کنید : ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -107,11 +162,11 @@
             this.Clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(11)))), ((int)(((byte)(245)))));
             this.Clear.Font = new System.Drawing.Font("Vazir", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Clear.ForeColor = System.Drawing.Color.White;
-            this.Clear.Location = new System.Drawing.Point(333, 415);
+            this.Clear.Location = new System.Drawing.Point(189, 432);
             this.Clear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(167, 68);
-            this.Clear.TabIndex = 25;
+            this.Clear.TabIndex = 51;
             this.Clear.Text = "پاک کن";
             this.Clear.UseVisualStyleBackColor = false;
             // 
@@ -120,12 +175,12 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Vazir", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(872, 337);
+            this.label6.Location = new System.Drawing.Point(668, 358);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label6.Size = new System.Drawing.Size(92, 42);
-            this.label6.TabIndex = 24;
+            this.label6.Size = new System.Drawing.Size(74, 33);
+            this.label6.TabIndex = 50;
             this.label6.Text = "نتیجه :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -136,12 +191,12 @@
             this.Result.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(28)))), ((int)(((byte)(30)))));
             this.Result.Font = new System.Drawing.Font("Vazir", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Result.ForeColor = System.Drawing.Color.White;
-            this.Result.Location = new System.Drawing.Point(161, 327);
+            this.Result.Location = new System.Drawing.Point(17, 344);
             this.Result.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Result.Name = "Result";
             this.Result.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Result.Size = new System.Drawing.Size(703, 63);
-            this.Result.TabIndex = 23;
+            this.Result.Size = new System.Drawing.Size(628, 63);
+            this.Result.TabIndex = 49;
             this.Result.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
@@ -149,12 +204,12 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Vazir", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(669, 55);
+            this.label3.Location = new System.Drawing.Point(399, 47);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label3.Size = new System.Drawing.Size(317, 42);
-            this.label3.TabIndex = 22;
+            this.label3.Size = new System.Drawing.Size(252, 33);
+            this.label3.TabIndex = 48;
             this.label3.Text = "نوع محاسبه را انتخاب کنید :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -163,28 +218,29 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Vazir", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(669, 257);
+            this.label1.Location = new System.Drawing.Point(400, 217);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(201, 42);
-            this.label1.TabIndex = 20;
+            this.label1.Size = new System.Drawing.Size(159, 33);
+            this.label1.TabIndex = 46;
             this.label1.Text = "نرخ را وارد کنید : ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // TabdilMohasebatRiazy
+            // btn
             // 
-            this.TabdilMohasebatRiazy.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TabdilMohasebatRiazy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(11)))), ((int)(((byte)(245)))));
-            this.TabdilMohasebatRiazy.Font = new System.Drawing.Font("Vazir", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.TabdilMohasebatRiazy.ForeColor = System.Drawing.Color.White;
-            this.TabdilMohasebatRiazy.Location = new System.Drawing.Point(158, 415);
-            this.TabdilMohasebatRiazy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TabdilMohasebatRiazy.Name = "TabdilMohasebatRiazy";
-            this.TabdilMohasebatRiazy.Size = new System.Drawing.Size(167, 68);
-            this.TabdilMohasebatRiazy.TabIndex = 21;
-            this.TabdilMohasebatRiazy.Text = "محاسبه";
-            this.TabdilMohasebatRiazy.UseVisualStyleBackColor = false;
+            this.btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(11)))), ((int)(((byte)(245)))));
+            this.btn.Font = new System.Drawing.Font("Vazir", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btn.ForeColor = System.Drawing.Color.White;
+            this.btn.Location = new System.Drawing.Point(14, 432);
+            this.btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(167, 68);
+            this.btn.TabIndex = 47;
+            this.btn.Text = "محاسبه";
+            this.btn.UseVisualStyleBackColor = false;
+            this.btn.Click += new System.EventHandler(this.btn_Click);
             // 
             // CB
             // 
@@ -194,58 +250,66 @@
             this.CB.Items.AddRange(new object[] {
             "روش قدیم",
             "روش جدید"});
-            this.CB.Location = new System.Drawing.Point(162, 47);
+            this.CB.Location = new System.Drawing.Point(16, 39);
             this.CB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CB.Name = "CB";
             this.CB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CB.Size = new System.Drawing.Size(499, 48);
-            this.CB.TabIndex = 19;
+            this.CB.Size = new System.Drawing.Size(364, 41);
+            this.CB.TabIndex = 45;
+            this.CB.Text = "روش قدیم";
+            this.CB.SelectedIndexChanged += new System.EventHandler(this.CB_SelectedIndexChanged_1);
             // 
-            // Price
+            // requiredFieldValidator1
             // 
-            this.Price.Location = new System.Drawing.Point(162, 126);
-            this.Price.Name = "Price";
-            this.Price.Size = new System.Drawing.Size(500, 39);
-            this.Price.TabIndex = 28;
-            this.Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.requiredFieldValidator1.CancelFocusChangeWhenInvalid = false;
+            this.requiredFieldValidator1.ControlToValidate = this.CB;
+            this.requiredFieldValidator1.ErrorMessage = "لطفا نوع محاسبه را انتخاب کنید";
+            this.requiredFieldValidator1.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator1.Icon")));
             // 
-            // Month
+            // requiredFieldValidator2
             // 
-            this.Month.Location = new System.Drawing.Point(162, 191);
-            this.Month.Name = "Month";
-            this.Month.Size = new System.Drawing.Size(500, 39);
-            this.Month.TabIndex = 29;
-            this.Month.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.requiredFieldValidator2.CancelFocusChangeWhenInvalid = false;
+            this.requiredFieldValidator2.ControlToValidate = this.Price;
+            this.requiredFieldValidator2.ErrorMessage = "لطفا قیمت را وارد کنید";
+            this.requiredFieldValidator2.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator2.Icon")));
             // 
-            // Percent
+            // requiredFieldValidator3
             // 
-            this.Percent.Location = new System.Drawing.Point(162, 257);
-            this.Percent.Name = "Percent";
-            this.Percent.Size = new System.Drawing.Size(500, 39);
-            this.Percent.TabIndex = 30;
-            this.Percent.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.requiredFieldValidator3.CancelFocusChangeWhenInvalid = false;
+            this.requiredFieldValidator3.ControlToValidate = this.Month;
+            this.requiredFieldValidator3.ErrorMessage = "لطفا ماه را وارد کنید";
+            this.requiredFieldValidator3.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator3.Icon")));
             // 
-            // errorProvider1
+            // requiredFieldValidator4
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.requiredFieldValidator4.CancelFocusChangeWhenInvalid = false;
+            this.requiredFieldValidator4.ControlToValidate = this.Percent;
+            this.requiredFieldValidator4.ErrorMessage = "لطفا نرخ را وارد کنید";
+            this.requiredFieldValidator4.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator4.Icon")));
+            // 
+            // requiredFieldValidator5
+            // 
+            this.requiredFieldValidator5.CancelFocusChangeWhenInvalid = false;
+            this.requiredFieldValidator5.ControlToValidate = this.Space;
+            this.requiredFieldValidator5.ErrorMessage = "فاصله بین اقساط را وارد کنید.";
+            this.requiredFieldValidator5.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator5.Icon")));
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1145, 541);
+            this.ClientSize = new System.Drawing.Size(757, 541);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Vazir", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
-            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "محاسبه سود قسط";
+            this.Text = "محاسبه سود اقساط";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -253,6 +317,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private ValidationComponents.RequiredFieldValidator requiredFieldValidator1;
+        private ValidationComponents.RequiredFieldValidator requiredFieldValidator2;
+        private ValidationComponents.RequiredFieldValidator requiredFieldValidator3;
+        private ValidationComponents.RequiredFieldValidator requiredFieldValidator4;
+        private System.Windows.Forms.TextBox Percent;
+        private System.Windows.Forms.TextBox Month;
+        private System.Windows.Forms.TextBox Price;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Clear;
@@ -260,12 +331,11 @@
         private System.Windows.Forms.Label Result;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button TabdilMohasebatRiazy;
+        private System.Windows.Forms.Button btn;
         private System.Windows.Forms.ComboBox CB;
-        private System.Windows.Forms.TextBox Percent;
-        private System.Windows.Forms.TextBox Month;
-        private System.Windows.Forms.TextBox Price;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TextBox Space;
+        private System.Windows.Forms.Label label4;
+        private ValidationComponents.RequiredFieldValidator requiredFieldValidator5;
     }
 }
 
