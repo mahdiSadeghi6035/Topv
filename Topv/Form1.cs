@@ -24,9 +24,9 @@ namespace Topv
 
         private void TabdilMohasebatRiazy_Click(object sender, EventArgs e)
         {
-            var price = double.Parse(Price.Value.ToString());
-            var month = double.Parse(Month.Value.ToString());
-            var percent = double.Parse(Percent.Value.ToString());
+            var price = double.Parse(Price.Text.ToString());
+            var month = double.Parse(Price.Text.ToString());
+            var percent = double.Parse(Percent.Text.ToString());
 
             var command = new CalculateModel(price, month, percent);
             var cb = CB.SelectedItem;
@@ -58,10 +58,15 @@ namespace Topv
 
         private void Clear_Click(object sender, EventArgs e)
         {
-            Month.Value = 1;
-            Price.Value = 1;
-            Percent.Value = 1;
+            Price.Text = "";
+            Price.Text = "";
+            Percent.Text = "";
             Result.Text = "";
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }

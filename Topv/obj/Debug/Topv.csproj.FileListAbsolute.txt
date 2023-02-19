@@ -9,3 +9,14 @@ C:\Users\sadqy\OneDrive\Desktop\Topv\Topv\bin\Debug\Topv.exe
 C:\Users\sadqy\OneDrive\Desktop\Topv\Topv\bin\Debug\Topv.pdb
 C:\Users\sadqy\OneDrive\Desktop\Topv\Topv\obj\Debug\Topv.exe
 C:\Users\sadqy\OneDrive\Desktop\Topv\Topv\obj\Debug\Topv.pdb
+D:\Programming\CSharp\AppWindosForm\Topv\Topv\bin\Debug\Topv.exe.config
+D:\Programming\CSharp\AppWindosForm\Topv\Topv\bin\Debug\Topv.exe
+D:\Programming\CSharp\AppWindosForm\Topv\Topv\bin\Debug\Topv.pdb
+D:\Programming\CSharp\AppWindosForm\Topv\Topv\obj\Debug\Topv.csproj.AssemblyReference.cache
+D:\Programming\CSharp\AppWindosForm\Topv\Topv\obj\Debug\Topv.csproj.SuggestedBindingRedirects.cache
+D:\Programming\CSharp\AppWindosForm\Topv\Topv\obj\Debug\Topv.Form1.resources
+D:\Programming\CSharp\AppWindosForm\Topv\Topv\obj\Debug\Topv.Properties.Resources.resources
+D:\Programming\CSharp\AppWindosForm\Topv\Topv\obj\Debug\Topv.csproj.GenerateResource.cache
+D:\Programming\CSharp\AppWindosForm\Topv\Topv\obj\Debug\Topv.csproj.CoreCompileInputs.cache
+D:\Programming\CSharp\AppWindosForm\Topv\Topv\obj\Debug\Topv.exe
+D:\Programming\CSharp\AppWindosForm\Topv\Topv\obj\Debug\Topv.pdb
