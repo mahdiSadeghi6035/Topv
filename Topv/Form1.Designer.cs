@@ -88,6 +88,8 @@
             this.Space.TabIndex = 58;
             this.Space.Text = "1";
             this.Space.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Space.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CB_KeyDown);
+            this.Space.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Space_KeyPress);
             // 
             // label4
             // 
@@ -110,6 +112,8 @@
             this.Percent.Size = new System.Drawing.Size(365, 32);
             this.Percent.TabIndex = 56;
             this.Percent.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Percent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CB_KeyDown);
+            this.Percent.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Percent_KeyPress);
             // 
             // Month
             // 
@@ -118,6 +122,8 @@
             this.Month.Size = new System.Drawing.Size(365, 32);
             this.Month.TabIndex = 55;
             this.Month.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Month.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CB_KeyDown);
+            this.Month.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Month_KeyPress);
             // 
             // Price
             // 
@@ -127,6 +133,8 @@
             this.Price.TabIndex = 54;
             this.Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Price.TextChanged += new System.EventHandler(this.Price_TextChanged_1);
+            this.Price.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CB_KeyDown);
+            this.Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Price_KeyPress);
             // 
             // label5
             // 
@@ -169,6 +177,7 @@
             this.Clear.TabIndex = 51;
             this.Clear.Text = "پاک کن";
             this.Clear.UseVisualStyleBackColor = false;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click_1);
             // 
             // label6
             // 
@@ -258,6 +267,7 @@
             this.CB.TabIndex = 45;
             this.CB.Text = "روش قدیم";
             this.CB.SelectedIndexChanged += new System.EventHandler(this.CB_SelectedIndexChanged_1);
+            this.CB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CB_KeyDown);
             // 
             // requiredFieldValidator1
             // 
@@ -291,7 +301,7 @@
             // 
             this.requiredFieldValidator5.CancelFocusChangeWhenInvalid = false;
             this.requiredFieldValidator5.ControlToValidate = this.Space;
-            this.requiredFieldValidator5.ErrorMessage = "فاصله بین اقساط را وارد کنید.";
+            this.requiredFieldValidator5.ErrorMessage = "فاصله بین اقساط را وارد کنید";
             this.requiredFieldValidator5.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator5.Icon")));
             // 
             // Form1
@@ -302,6 +312,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Vazir", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;

@@ -13,19 +13,6 @@ namespace Topv
             InitializeComponent();
             _calculate = new Calculate();
         }
-
-
-        private void Clear_Click(object sender, EventArgs e)
-        {
-            Price.Text = "";
-            Month.Text = "";
-            Percent.Text = "";
-            Result.Text = "";
-        }
-
-        
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
             Space.Visible = true;
@@ -33,10 +20,15 @@ namespace Topv
         }
         private void Price_TextChanged_1(object sender, EventArgs e)
         {
-            double price;
-            price = double.Parse(Price.Text, System.Globalization.NumberStyles.Currency);
-            Price.Text = price.ToString("#,#");
-            Price.SelectionStart = Price.TextLength;
+
+            if (Price.Text != "")
+            {
+                double price;
+                price = double.Parse(Price.Text, System.Globalization.NumberStyles.Currency);
+                Price.Text = price.ToString("#,#");
+                Price.SelectionStart = Price.TextLength;
+            }
+
         }
 
         private void btn_Click(object sender, EventArgs e)
@@ -86,6 +78,50 @@ namespace Topv
                 label4.Visible = false;
             }
 
+        }
+
+        private void CB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                SelectNextControl(ActiveControl, true, true, true, true);
+            }
+        }
+
+        private void Price_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char(e);
+        }
+
+        private void Month_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char(e);
+        }
+
+        private void Percent_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char(e);
+        }
+
+        private void Space_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char(e);
+        }
+        public void Char(KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Clear_Click_1(object sender, EventArgs e)
+        {
+            Price.Text = "";
+            Month.Text = "";
+            Percent.Text = "";
+            Result.Text = "";
         }
     }
 }
